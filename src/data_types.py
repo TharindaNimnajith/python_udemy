@@ -1,9 +1,4 @@
-print('Hello World!')
-
-name = input('What is your name? ')
-print('Hello ' + name)
-
-# fundamental data types
+# fundamental data types:
 # int
 # float
 # bool
