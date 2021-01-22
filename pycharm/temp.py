@@ -46,16 +46,6 @@ attendance_list = ['Jammy', 'Bobby', 'Danny', 'Sally']
 print(school.difference(attendance_list))
 
 
-# Machine Learning steps
-
-# 1 - Import the data
-# 2 - Clean the data
-# 3 - Split data - Training Set and Test Set
-# 4 - Create a Model
-# 5 - Check the output
-# 6 - Improve
-
-
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 counter = 0
