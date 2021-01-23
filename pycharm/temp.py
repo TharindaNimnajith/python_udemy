@@ -518,12 +518,6 @@ while (n := len(a)) > 1:
 print(a)
 
 
-mx = [[1, 2], [3, 4]]
-for row in range(len(mx)):
-    for col in range(len(mx)):
-        print(mx[row][col])  # 1 2 3 4
-
-
 import requests
 from bs4 import BeautifulSoup
 import pprint
