@@ -518,9 +518,6 @@ for tweet in tweepy.Cursor(api.search, search).items(numberOfTweets):
 #([A-Za-z0-9$%#@]{7,}[0-9])
 
 
-print(1 > 3 or 4 > 1)
-
-
 # MRO - Method Resolution Order
 
 class A:
