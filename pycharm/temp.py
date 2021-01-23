@@ -1,30 +1,3 @@
-my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-counter = 0
-
-for item in my_list:
-    counter = counter + item
-
-print(counter)
-
-
-some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
-
-duplicates = []
-
-for value in some_list:
-    if some_list.count(value) > 1:
-        if value not in duplicates:
-            duplicates.append(value)
-
-print(duplicates)
-
-
-some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
-duplicates = list(set([x for x in some_list if some_list.count(x) > 1]))
-print(duplicates)
-
-
 def highest_even(list_):
     evens = []
     for list_item in list_:
@@ -549,3 +522,38 @@ mx = [[1, 2], [3, 4]]
 for row in range(len(mx)):
     for col in range(len(mx)):
         print(mx[row][col])  # 1 2 3 4
+
+
+import requests
+from bs4 import BeautifulSoup
+import pprint
+
+res = requests.get('https://news.ycombinator.com/news')
+res2 = requests.get('https://news.ycombinator.com/news?p=2')
+soup = BeautifulSoup(res.text, 'html.parser')
+soup2 = BeautifulSoup(res2.text, 'html.parser')
+
+links = soup.select('.storylink')
+subtext = soup.select('.subtext')
+links2 = soup2.select('.storylink')
+subtext2 = soup2.select('.subtext')
+
+mega_links = links + links2
+mega_subtext = subtext + subtext2
+
+def sort_stories_by_votes(hnlist):
+    return sorted(hnlist, key=lambda k: k['votes'], reverse=True)
+
+def create_custom_hn(links, subtext):
+    hn = []
+    for idx, item in enumerate(links):
+        title = item.getText()
+        href = item.get('href', None)
+        vote = subtext[idx].select('.score')
+        if len(vote):
+            points = int(vote[0].getText().replace(' points', ''))
+            if points > 99:
+                hn.append({'title': title, 'link': href, 'votes': points})
+    return sort_stories_by_votes(hn)
+
+pprint.pprint(create_custom_hn(mega_links, mega_subtext))
