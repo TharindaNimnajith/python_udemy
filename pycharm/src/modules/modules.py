@@ -1,4 +1,10 @@
-# modules
+# modules and packages
+
+# packages - folders
+# package can have multiple modules inside of it
+# package can contain modules
+
+# modules - files
 
 # three main types of modules in python
 # 1. those you write yourself
