@@ -11,7 +11,6 @@ if len(a) > 10:
 else:
     print(f'Element \'{a}\' is OK.')
 
-
 a = 'Hello World!'
 
 # noinspection PyRedundantParentheses
@@ -20,7 +19,6 @@ if ((n := len(a)) > 10):
 else:
     print(f'Element \'{a}\' is OK.')
 
-
 a = 'Hello World!'
 
 if (n := len(a)) > 10:
@@ -28,7 +26,6 @@ if (n := len(a)) > 10:
 else:
     print(f'Element \'{a}\' is OK.')
 
-
 a = 'Hello World!'
 
 if n := len(a) > 10:
@@ -36,12 +33,10 @@ if n := len(a) > 10:
 else:
     print(f'Element \'{a}\' is OK.')
 
-
 a = 'Hello World!'
 
 if n := len(a) > 10:
     print(n)
-
 
 a = 'Hello World!'
 
@@ -49,18 +44,15 @@ a = 'Hello World!'
 if (n := len(a) > 10):
     print(n)
 
-
 a = 'Hello World!'
 
 if n := (len(a) > 10):
     print(n)
 
-
 a = 'Hello World!'
 
 if (n := len(a)) > 10:
     print(n)
-
 
 a = 'Hello World!'
 
