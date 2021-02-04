@@ -7,7 +7,6 @@ jokes = pyjokes.get_jokes()
 for joke in jokes:
     print(joke)
 
-
 # pip3 install pyjokes
 # pip3 list
 # pip3 uninstall pyjokes
@@ -21,4 +20,5 @@ for joke in jokes:
 # pip list
 
 # py jokes.py
+# python3 jokes.py
 # python jokes.py
