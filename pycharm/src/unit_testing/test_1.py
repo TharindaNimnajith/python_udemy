@@ -5,6 +5,9 @@ import main
 
 class TestMain(unittest.TestCase):
     def test_do_stuff_1(self):
+        """
+        inside comment - test_do_stuff_1 test
+        """
         print('test_do_stuff_1_')
         test_param = 10
         result = main.do_stuff(test_param)
