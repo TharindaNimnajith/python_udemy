@@ -4,6 +4,9 @@ import main
 
 
 class TestMain(unittest.TestCase):
+    def setUp(self):
+        print('This is the setup')
+
     def test_do_stuff_1(self):
         """
         inside comment - test_do_stuff_1 test
@@ -54,6 +57,9 @@ class TestMain(unittest.TestCase):
         test_param = 0
         result = main.do_stuff(test_param)
         self.assertEqual(result, 5)
+
+    def tearDown(self):
+        print('Cleaning up')
 
 
 if __name__ == '__main__':
